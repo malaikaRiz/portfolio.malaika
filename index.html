@@ -166,9 +166,10 @@ footer{padding:clamp(72px,10vw,120px) var(--pad) 32px;display:flex;justify-conte
   <div class="grid g-story" data-prefix="Story" data-count="3" data-alt="Story design"></div>
 </section>
 
-  <section id="social media post">
-  <div class="sec-head"><h2>Social Media Post </h2></div>
-  <div class="grid g-social media post" data-prefix="Social media post" data-count="3" data-alt="">Social Media Post </div>
+  
+<section id="social-media-posts">
+  <div class="sec-head"><h2>Social Media Posts</h2></div>
+  <div class="grid g-social" data-prefix="Social media post " data-count="3" data-alt="Social media post"></div>
 </section>
 
 <section id="about">
@@ -204,10 +205,18 @@ footer{padding:clamp(72px,10vw,120px) var(--pad) 32px;display:flex;justify-conte
     if(im)openLB(im.getAttribute('src'),im.alt);
   });
 
-  function files(el){
-    var p=el.dataset.prefix,n=+el.dataset.count,a=[];
-    for(var i=1;i<=n;i++)a.push('assets/'+p+i+'.png');
-    return a;
+  
+function files(el){
+  var p = el.dataset.prefix;
+  var n = +el.dataset.count;
+  var a = [];
+
+  for (var i = 1; i <= n; i++) {
+    a.push('assets/' + p + i + '.png');
+  }
+
+  return a;
+}
   }
 
   // Galleries
